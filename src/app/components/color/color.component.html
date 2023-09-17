@@ -1,0 +1,11 @@
+<div  class="alert alert-success" role="alert" style="text-align: center"> <th>COLOR INFORMATION</th> </div>
+
+<ul class="list-group">
+    <li [class]="getAllColorClass()" routerLink ="/cars">Tüm ürünler</li>
+    <li (click)="setCurrentColor(color)"
+    routerLink ="/cars/color/{{color.colorId}}"
+     *ngFor = "let color of colors"
+     [class]="getCurrentColorClass(color)">
+        {{color.colorName}}
+    </li>
+</ul>
